@@ -22,54 +22,10 @@ int main() {
 
 int max_of_four(int a, int b, int c, int d)
 {
-    if (a > b) 
-    {
-        if (a > c)
-        {
-            if (a > d)
-            {
-                return a;
-            }
-            else
-            {
-                return d;
-            }
-        }
-        else 
-        {
-            if (c > d)
-            {
-                return c;
-            }
-            else   
-            {
-                return d;
-            }
-        }
-    }
-    else  
-    {
-        if (b > c)
-        {
-            if (b > d)
-            {
-                return b;
-            }
-            else  
-            {
-                return d;
-            }
-        }
-        else  
-        {
-            if (c > d)
-            {
-                return c;
-            }
-            else   
-            {
-                return d;
-            }
-        }
-    }
+    int max; 
+    max = a > b ? a : b;
+    max = c > max ? c : max;
+    max = d > max ? d : max;
+    
+    return max;
 }
