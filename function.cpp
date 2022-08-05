@@ -29,3 +29,12 @@ int max_of_four(int a, int b, int c, int d)
     
     return max;
 }
+
+//------------------------------------------------------------------------------------------
+
+// If you're going to use std::max() then it would look like
+int max_of_four(int a, int b, int c, int d)
+{
+    return std::max(a, max(b, max(c, d)));
+}
+
